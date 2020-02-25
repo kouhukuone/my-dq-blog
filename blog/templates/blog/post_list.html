@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>テストページ</title>
+        <title>輝晶獣分散狩り支援ページ</title>
         <meta charset="utf-8">
     </head>
     <body>
@@ -12,30 +12,34 @@
             <h2>使い方</h2>
             <p>各フィールドでクリスタルゲージを使用し、ゲーム内で表示された色に対応するボタンをクリックしてください。<br>
             クリックした時間が表示されます。リセットするにはこのページを更新してください。<br>
+            赤をクリックすると、クリックした時間の下に<b>赤を押してから経過した時間</b>が表示されます。虹になりそうなタイミングの予測に役立ててください。<br>
+            (赤以外をクリックするとタイマーは止まります。再度赤をクリックするとタイマーが再始動します。誤クリックに注意！)<br>
             ※プロトタイプのため、スマートフォン・タブレットで表示した場合、レイアウトが崩れる可能性があります。</p>
 
             <table border>
                 <tr>
                 <td><p></p></td>
                 <td><p>ゲルヘナ幻野</p></td>
-                <td><p>ジャムリバハ砂漠</p></td>
+                <td><p>ジャリムバハ砂漠</p></td>
                 <td><p>バルディスタ要塞</p></td>
                 </tr>
                 <tr>
                 <td><p id="server1"></p></td>
-                <td><p id="geru1"></p>
+                <td><p id="geru1"></p><p id="geru1cnt"></p>
                     <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru1")'>
                     <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru1")'>
                     <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru1")'>
                     <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru1")'>
                     <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru1")'></td>
                 <td><p id="jam1"></p>
+                    <p id="jam1cnt"></p>
                     <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam1")'>
                     <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam1")'>
                     <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam1")'>
                     <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam1")'>
                     <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam1")'></td>
                 <td><p id="baru1"></p>
+                    <p id="baru1cnt"></p>
                     <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru1")'>
                     <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru1")'>
                     <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru1")'>
@@ -44,19 +48,21 @@
                 </tr>
                 <tr>
                     <td><p id="server2"></p></td>
-                    <td><p id="geru2"></p>
+                    <td><p id="geru2"></p><p id="geru2cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru2")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru2")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru2")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru2")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru2")'></td>
                     <td><p id="jam2"></p>
+                        <p id="jam2cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam2")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam2")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam2")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam2")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam2")'></td>
                     <td><p id="baru2"></p>
+                        <p id="baru2cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru2")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru2")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru2")'>
@@ -65,19 +71,19 @@
                 </tr>
                 <tr>
                     <td><p id="server3"></p></td>
-                    <td><p id="geru3"></p>
+                    <td><p id="geru3"></p><p id="geru3cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru3")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru3")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru3")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru3")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru3")'></td>
-                    <td><p id="jam3"></p>
+                    <td><p id="jam3"></p><p id="jam3cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam3")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam3")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam3")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam3")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam3")'></td>
-                    <td><p id="baru3"></p>
+                    <td><p id="baru3"></p><p id="baru3cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru3")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru3")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru3")'>
@@ -86,19 +92,19 @@
                 </tr>
                 <tr>
                     <td><p id="server4"></p></td>
-                    <td><p id="geru4"></p>
+                    <td><p id="geru4"></p><p id="geru4cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru4")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru4")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru4")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru4")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru4")'></td>
-                    <td><p id="jam4"></p>
+                    <td><p id="jam4"></p><p id="jam4cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam4")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam4")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam4")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam4")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam4")'></td>
-                    <td><p id="baru4"></p>
+                    <td><p id="baru4"></p><p id="baru4cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru4")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru4")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru4")'>
@@ -107,19 +113,19 @@
                 </tr>
                 <tr>
                     <td><p id="server5"></p></td>
-                    <td><p id="geru5"></p>
+                    <td><p id="geru5"></p><p id="geru5cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru5")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru5")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru5")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru5")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru5")'></td>
-                    <td><p id="jam5"></p>
+                    <td><p id="jam5"></p><p id="jam5cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam5")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam5")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam5")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam5")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam5")'></td>
-                    <td><p id="baru5"></p>
+                    <td><p id="baru5"></p><p id="baru5cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru5")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru5")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru5")'>
@@ -128,19 +134,19 @@
                 </tr>
                 <tr>
                     <td><p id="server6"></p></td>
-                    <td><p id="geru6"></p>
+                    <td><p id="geru6"></p><p id="geru6cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru6")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru6")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru6")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru6")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru6")'></td>
-                    <td><p id="jam6"></p>
+                    <td><p id="jam6"></p><p id="jam6cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam6")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam6")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam6")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam6")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam6")'></td>
-                    <td><p id="baru6"></p>
+                    <td><p id="baru6"></p><p id="baru6cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru6")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru6")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru6")'>
@@ -149,19 +155,19 @@
                 </tr>
                 <tr>
                     <td><p id="server7"></p></td>
-                    <td><p id="geru7"></p>
+                    <td><p id="geru7"></p><p id="geru7cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru7")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru7")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru7")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru7")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru7")'></td>
-                    <td><p id="jam7"></p>
+                    <td><p id="jam7"></p><p id="jam7cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam7")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam7")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam7")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam7")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam7")'></td>
-                    <td><p id="baru7"></p>
+                    <td><p id="baru7"></p><p id="baru7cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru7")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru7")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru7")'>
@@ -170,19 +176,19 @@
                 </tr>
                 <tr>
                     <td><p id="server8"></p></td>
-                    <td><p id="geru8"></p>
+                    <td><p id="geru8"></p><p id="geru8cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru8")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru8")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru8")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru8")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru8")'></td>
-                    <td><p id="jam8"></p>
+                    <td><p id="jam8"></p><p id="jam8cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam8")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam8")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam8")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam8")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam8")'></td>
-                    <td><p id="baru8"></p>
+                    <td><p id="baru8"></p><p id="baru8cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru8")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru8")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru8")'>
@@ -191,19 +197,19 @@
                 </tr>
                 <tr>
                     <td><p id="server9"></p></td>
-                    <td><p id="geru9"></p>
+                    <td><p id="geru9"></p><p id="geru9cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru9")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru9")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru9")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru9")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru9")'></td>
-                    <td><p id="jam9"></p>
+                    <td><p id="jam9"></p><p id="jam9cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam9")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam9")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam9")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam9")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam9")'></td>
-                    <td><p id="baru9"></p>
+                    <td><p id="baru9"></p><p id="baru9cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru9")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru9")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru9")'>
@@ -212,19 +218,19 @@
                 </tr>
                 <tr>
                     <td><p id="server10"></p></td>
-                    <td><p id="geru10"></p>
+                    <td><p id="geru10"></p><p id="geru10cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru10")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru10")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru10")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru10")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru10")'></td>
-                    <td><p id="jam10"></p>
+                    <td><p id="jam10"></p><p id="jam10cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam10")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam10")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam10")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam10")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam10")'></td>
-                    <td><p id="baru10"></p>
+                    <td><p id="baru10"></p><p id="baru10cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru10")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru10")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru10")'>
@@ -234,24 +240,24 @@
                 <tr>
                     <td><p></p></td>
                     <td><p>ゲルヘナ幻野</p></td>
-                    <td><p>ジャムリバハ砂漠</p></td>
+                    <td><p>ジャリムバハ砂漠</p></td>
                     <td><p>バルディスタ要塞</p></td>
                 </tr>
                 <tr>
                     <td><p id="server11"></p></td>
-                    <td><p id="geru11"></p>
+                    <td><p id="geru11"></p><p id="geru11cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru11")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru11")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru11")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru11")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru11")'></td>
-                    <td><p id="jam11"></p>
+                    <td><p id="jam11"></p><p id="jam11cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam11")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam11")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam11")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam11")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam11")'></td>
-                    <td><p id="baru11"></p>
+                    <td><p id="baru11"></p><p id="baru11cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru11")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru11")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru11")'>
@@ -260,19 +266,19 @@
                 </tr>
                 <tr>
                     <td><p id="server12"></p></td>
-                    <td><p id="geru12"></p>
+                    <td><p id="geru12"></p><p id="geru12cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru12")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru12")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru12")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru12")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru12")'></td>
-                    <td><p id="jam12"></p>
+                    <td><p id="jam12"></p><p id="jam12cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam12")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam12")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam12")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam12")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam12")'></td>
-                    <td><p id="baru12"></p>
+                    <td><p id="baru12"></p><p id="baru12cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru12")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru12")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru12")'>
@@ -281,19 +287,19 @@
                 </tr>
                 <tr>
                     <td><p id="server13"></p></td>
-                    <td><p id="geru13"></p>
+                    <td><p id="geru13"></p><p id="geru13cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru13")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru13")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru13")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru13")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru13")'></td>
-                    <td><p id="jam13"></p>
+                    <td><p id="jam13"></p><p id="jam13cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam13")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam13")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam13")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam13")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam13")'></td>
-                    <td><p id="baru13"></p>
+                    <td><p id="baru13"></p><p id="baru13cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru13")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru13")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru13")'>
@@ -302,19 +308,19 @@
                 </tr>
                 <tr>
                     <td><p id="server14"></p></td>
-                    <td><p id="geru14"></p>
+                    <td><p id="geru14"></p><p id="geru14cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru14")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru14")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru14")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru14")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru14")'></td>
-                    <td><p id="jam14"></p>
+                    <td><p id="jam14"></p><p id="jam14cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam14")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam14")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam14")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam14")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam14")'></td>
-                    <td><p id="baru14"></p>
+                    <td><p id="baru14"></p><p id="baru14cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru14")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru14")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru14")'>
@@ -323,19 +329,19 @@
                 </tr>
                 <tr>
                     <td><p id="server15"></p></td>
-                    <td><p id="geru15"></p>
+                    <td><p id="geru15"></p><p id="geru15cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru15")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru15")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru15")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru15")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru15")'></td>
-                    <td><p id="jam15"></p>
+                    <td><p id="jam15"></p><p id="jam15cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam15")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam15")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam15")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam15")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam15")'></td>
-                    <td><p id="baru15"></p>
+                    <td><p id="baru15"></p><p id="baru15cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru15")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru15")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru15")'>
@@ -344,19 +350,19 @@
                 </tr>
                 <tr>
                     <td><p id="server16"></p></td>
-                    <td><p id="geru16"></p>
+                    <td><p id="geru16"></p><p id="geru16cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru16")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru16")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru16")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru16")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru16")'></td>
-                    <td><p id="jam16"></p>
+                    <td><p id="jam16"></p><p id="jam16cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam16")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam16")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam16")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam16")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam16")'></td>
-                    <td><p id="baru16"></p>
+                    <td><p id="baru16"></p><p id="baru16cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru16")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru16")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru16")'>
@@ -365,19 +371,19 @@
                 </tr>
                 <tr>
                     <td><p id="server17"></p></td>
-                    <td><p id="geru17"></p>
+                    <td><p id="geru17"></p><p id="geru17cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru17")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru17")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru17")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru17")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru17")'></td>
-                    <td><p id="jam17"></p>
+                    <td><p id="jam17"></p><p id="jam17cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam17")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam17")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam17")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam17")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam17")'></td>
-                    <td><p id="baru17"></p>
+                    <td><p id="baru17"></p><p id="baru17cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru17")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru17")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru17")'>
@@ -386,19 +392,19 @@
                 </tr>
                 <tr>
                     <td><p id="server18"></p></td>
-                    <td><p id="geru18"></p>
+                    <td><p id="geru18"></p><p id="geru18cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru18")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru18")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru18")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru18")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru18")'></td>
-                    <td><p id="jam18"></p>
+                    <td><p id="jam18"></p><p id="jam18cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam18")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam18")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam18")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam18")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam18")'></td>
-                    <td><p id="baru18"></p>
+                    <td><p id="baru18"></p><p id="baru18cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru18")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru18")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru18")'>
@@ -407,19 +413,19 @@
                 </tr>
                 <tr>
                     <td><p id="server19"></p></td>
-                    <td><p id="geru19"></p>
+                    <td><p id="geru19"></p><p id="geru19cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru19")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru19")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru19")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru19")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru19")'></td>
-                    <td><p id="jam19"></p>
+                    <td><p id="jam19"></p><p id="jam19cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam19")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam19")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam19")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam19")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam19")'></td>
-                    <td><p id="baru19"></p>
+                    <td><p id="baru19"></p><p id="baru19cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru19")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru19")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru19")'>
@@ -428,19 +434,19 @@
                 </tr>
                 <tr>
                     <td><p id="server20"></p></td>
-                    <td><p id="geru20"></p>
+                    <td><p id="geru20"></p><p id="geru20cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru20")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru20")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru20")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru20")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru20")'></td>
-                    <td><p id="jam20"></p>
+                    <td><p id="jam20"></p><p id="jam20cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam20")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam20")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam20")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam20")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam20")'></td>
-                    <td><p id="baru20"></p>
+                    <td><p id="baru20"></p><p id="baru20cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru20")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru20")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru20")'>
@@ -450,24 +456,24 @@
                 <tr>
                     <td><p></p></td>
                     <td><p>ゲルヘナ幻野</p></td>
-                    <td><p>ジャムリバハ砂漠</p></td>
+                    <td><p>ジャリムバハ砂漠</p></td>
                     <td><p>バルディスタ要塞</p></td>
                 </tr>
                 <tr>
                     <td><p id="server21"></p></td>
-                    <td><p id="geru21"></p>
+                    <td><p id="geru21"></p><p id="geru21cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru21")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru21")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru21")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru21")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru21")'></td>
-                    <td><p id="jam21"></p>
+                    <td><p id="jam21"></p><p id="jam21cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam21")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam21")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam21")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam21")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam21")'></td>
-                    <td><p id="baru21"></p>
+                    <td><p id="baru21"></p><p id="baru21cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru21")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru21")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru21")'>
@@ -476,19 +482,19 @@
                 </tr>
                 <tr>
                     <td><p id="server22"></p></td>
-                    <td><p id="geru22"></p>
+                    <td><p id="geru22"></p><p id="geru22cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru22")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru22")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru22")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru22")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru22")'></td>
-                    <td><p id="jam22"></p>
+                    <td><p id="jam22"></p><p id="jam22cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam22")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam22")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam22")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam22")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam22")'></td>
-                    <td><p id="baru22"></p>
+                    <td><p id="baru22"></p><p id="baru22cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru22")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru22")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru22")'>
@@ -497,19 +503,19 @@
                 </tr>
                 <tr>
                     <td><p id="server23"></p></td>
-                    <td><p id="geru23"></p>
+                    <td><p id="geru23"></p><p id="geru23cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru23")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru23")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru23")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru23")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru23")'></td>
-                    <td><p id="jam23"></p>
+                    <td><p id="jam23"></p><p id="jam23cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam23")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam23")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam23")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam23")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam23")'></td>
-                    <td><p id="baru23"></p>
+                    <td><p id="baru23"></p><p id="baru23cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru23")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru23")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru23")'>
@@ -518,19 +524,19 @@
                 </tr>
                 <tr>
                     <td><p id="server24"></p></td>
-                    <td><p id="geru24"></p>
+                    <td><p id="geru24"></p><p id="geru24cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru24")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru24")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru24")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru24")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru24")'></td>
-                    <td><p id="jam24"></p>
+                    <td><p id="jam24"></p><p id="jam24cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam24")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam24")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam24")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam24")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam24")'></td>
-                    <td><p id="baru24"></p>
+                    <td><p id="baru24"></p><p id="baru24cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru24")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru24")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru24")'>
@@ -539,19 +545,19 @@
                 </tr>
                 <tr>
                     <td><p id="server25"></p></td>
-                    <td><p id="geru25"></p>
+                    <td><p id="geru25"></p><p id="geru25cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru25")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru25")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru25")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru25")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru25")'></td>
-                    <td><p id="jam25"></p>
+                    <td><p id="jam25"></p><p id="jam25cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam25")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam25")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam25")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam25")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam25")'></td>
-                    <td><p id="baru25"></p>
+                    <td><p id="baru25"></p><p id="baru25cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru25")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru25")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru25")'>
@@ -560,19 +566,19 @@
                 </tr>
                 <tr>
                     <td><p id="server26"></p></td>
-                    <td><p id="geru26"></p>
+                    <td><p id="geru26"></p><p id="geru26cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru26")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru26")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru26")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru26")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru26")'></td>
-                    <td><p id="jam26"></p>
+                    <td><p id="jam26"></p><p id="jam26cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam26")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam26")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam26")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam26")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam26")'></td>
-                    <td><p id="baru26"></p>
+                    <td><p id="baru26"></p><p id="baru26cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru26")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru26")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru26")'>
@@ -581,19 +587,19 @@
                 </tr>
                 <tr>
                     <td><p id="server27"></p></td>
-                    <td><p id="geru27"></p>
+                    <td><p id="geru27"></p><p id="geru27cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru27")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru27")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru27")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru27")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru27")'></td>
-                    <td><p id="jam27"></p>
+                    <td><p id="jam27"></p><p id="jam27cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam27")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam27")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam27")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam27")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam27")'></td>
-                    <td><p id="baru27"></p>
+                    <td><p id="baru27"></p><p id="baru27cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru27")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru27")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru27")'>
@@ -602,19 +608,19 @@
                 </tr>
                 <tr>
                     <td><p id="server28"></p></td>
-                    <td><p id="geru28"></p>
+                    <td><p id="geru28"></p><p id="geru28cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru28")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru28")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru28")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru28")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru28")'></td>
-                    <td><p id="jam28"></p>
+                    <td><p id="jam28"></p><p id="jam28cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam28")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam28")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam28")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam28")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam28")'></td>
-                    <td><p id="baru28"></p>
+                    <td><p id="baru28"></p><p id="baru28cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru28")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru28")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru28")'>
@@ -623,19 +629,19 @@
                 </tr>
                 <tr>
                     <td><p id="server29"></p></td>
-                    <td><p id="geru29"></p>
+                    <td><p id="geru29"></p><p id="geru29cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru29")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru29")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru29")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru29")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru29")'></td>
-                    <td><p id="jam29"></p>
+                    <td><p id="jam29"></p><p id="jam29cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam29")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam29")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam29")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam29")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam29")'></td>
-                    <td><p id="baru29"></p>
+                    <td><p id="baru29"></p><p id="baru29cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru29")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru29")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru29")'>
@@ -644,19 +650,19 @@
                 </tr>
                 <tr>
                     <td><p id="server30"></p></td>
-                    <td><p id="geru30"></p>
+                    <td><p id="geru30"></p><p id="geru30cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru30")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru30")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru30")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru30")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru30")'></td>
-                    <td><p id="jam30"></p>
+                    <td><p id="jam30"></p><p id="jam30cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam30")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam30")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam30")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam30")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam30")'></td>
-                    <td><p id="baru30"></p>
+                    <td><p id="baru30"></p><p id="baru30cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru30")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru30")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru30")'>
@@ -666,24 +672,24 @@
                 <tr>
                     <td><p></p></td>
                     <td><p>ゲルヘナ幻野</p></td>
-                    <td><p>ジャムリバハ砂漠</p></td>
+                    <td><p>ジャリムバハ砂漠</p></td>
                     <td><p>バルディスタ要塞</p></td>
                 </tr>
                 <tr>
                     <td><p id="server31"></p></td>
-                    <td><p id="geru31"></p>
+                    <td><p id="geru31"></p><p id="geru31cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru31")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru31")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru31")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru31")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru31")'></td>
-                    <td><p id="jam31"></p>
+                    <td><p id="jam31"></p><p id="jam31cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam31")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam31")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam31")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam31")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam31")'></td>
-                    <td><p id="baru31"></p>
+                    <td><p id="baru31"></p><p id="baru31cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru31")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru31")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru31")'>
@@ -692,19 +698,19 @@
                 </tr>
                 <tr>
                     <td><p id="server32"></p></td>
-                    <td><p id="geru32"></p>
+                    <td><p id="geru32"></p><p id="geru32cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru32")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru32")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru32")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru32")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru32")'></td>
-                    <td><p id="jam32"></p>
+                    <td><p id="jam32"></p><p id="jam32cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam32")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam32")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam32")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam32")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam32")'></td>
-                    <td><p id="baru32"></p>
+                    <td><p id="baru32"></p><p id="baru32cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru32")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru32")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru32")'>
@@ -713,19 +719,19 @@
                 </tr>
                 <tr>
                     <td><p id="server33"></p></td>
-                    <td><p id="geru33"></p>
+                    <td><p id="geru33"></p><p id="geru33cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru33")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru33")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru33")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru33")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru33")'></td>
-                    <td><p id="jam33"></p>
+                    <td><p id="jam33"></p><p id="jam33cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam33")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam33")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam33")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam33")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam33")'></td>
-                    <td><p id="baru33"></p>
+                    <td><p id="baru33"></p><p id="baru33cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru33")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru33")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru33")'>
@@ -734,19 +740,19 @@
                 </tr>
                 <tr>
                     <td><p id="server34"></p></td>
-                    <td><p id="geru34"></p>
+                    <td><p id="geru34"></p><p id="geru34cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru34")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru34")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru34")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru34")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru34")'></td>
-                    <td><p id="jam34"></p>
+                    <td><p id="jam34"></p><p id="jam34cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam34")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam34")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam34")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam34")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam34")'></td>
-                    <td><p id="baru34"></p>
+                    <td><p id="baru34"></p><p id="baru34cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru34")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru34")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru34")'>
@@ -755,19 +761,19 @@
                 </tr>
                 <tr>
                     <td><p id="server35"></p></td>
-                    <td><p id="geru35"></p>
+                    <td><p id="geru35"></p><p id="geru35cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru35")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru35")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru35")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru35")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru35")'></td>
-                    <td><p id="jam35"></p>
+                    <td><p id="jam35"></p><p id="jam35cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam35")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam35")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam35")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam35")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam35")'></td>
-                    <td><p id="baru35"></p>
+                    <td><p id="baru35"></p><p id="baru35cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru35")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru35")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru35")'>
@@ -776,19 +782,19 @@
                 </tr>
                 <tr>
                     <td><p id="server36"></p></td>
-                    <td><p id="geru36"></p>
+                    <td><p id="geru36"></p><p id="geru36cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru36")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru36")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru36")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru36")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru36")'></td>
-                    <td><p id="jam36"></p>
+                    <td><p id="jam36"></p><p id="jam36cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam36")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam36")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam36")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam36")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam36")'></td>
-                    <td><p id="baru36"></p>
+                    <td><p id="baru36"></p><p id="baru36cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru36")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru36")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru36")'>
@@ -797,19 +803,19 @@
                 </tr>
                 <tr>
                     <td><p id="server37"></p></td>
-                    <td><p id="geru37"></p>
+                    <td><p id="geru37"></p><p id="geru37cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru37")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru37")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru37")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru37")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru37")'></td>
-                    <td><p id="jam37"></p>
+                    <td><p id="jam37"></p><p id="jam37cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam37")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam37")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam37")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam37")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam37")'></td>
-                    <td><p id="baru37"></p>
+                    <td><p id="baru37"></p><p id="baru37cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru37")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru37")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru37")'>
@@ -818,19 +824,19 @@
                 </tr>
                 <tr>
                     <td><p id="server38"></p></td>
-                    <td><p id="geru38"></p>
+                    <td><p id="geru38"></p><p id="geru38cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru38")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru38")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru38")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru38")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru38")'></td>
-                    <td><p id="jam38"></p>
+                    <td><p id="jam38"></p><p id="jam38cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam38")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam38")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam38")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam38")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam38")'></td>
-                    <td><p id="baru38"></p>
+                    <td><p id="baru38"></p><p id="baru38cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru38")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru38")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru38")'>
@@ -839,19 +845,19 @@
                 </tr>
                 <tr>
                     <td><p id="server39"></p></td>
-                    <td><p id="geru39"></p>
+                    <td><p id="geru39"></p><p id="geru39cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru39")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru39")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru39")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru39")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru39")'></td>
-                    <td><p id="jam39"></p>
+                    <td><p id="jam39"></p><p id="jam39cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam39")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam39")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam39")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam39")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam39")'></td>
-                    <td><p id="baru39"></p>
+                    <td><p id="baru39"></p><p id="baru39cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru39")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru39")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru39")'>
@@ -860,19 +866,19 @@
                 </tr>
                 <tr>
                     <td><p id="server40"></p></td>
-                    <td><p id="geru40"></p>
+                    <td><p id="geru40"></p><p id="geru40cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("geru40")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("geru40")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("geru40")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("geru40")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("geru40")'></td>
-                    <td><p id="jam40"></p>
+                    <td><p id="jam40"></p><p id="jam40cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("jam40")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("jam40")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("jam40")'>
                         <input type='button' value='赤' style='background-color:red;' onclick='defStatusRed("jam40")'>
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("jam40")'></td>
-                    <td><p id="baru40"></p>
+                    <td><p id="baru40"></p><p id="baru40cnt"></p>
                         <input type='button' value='白' style='background-color:white;' onclick='defStatusWhite("baru40")'>
                         <input type='button' value='青' style='background-color:skyblue;' onclick='defStatusBlue("baru40")'>
                         <input type='button' value='黄' style='background-color:yellow;' onclick='defStatusYellow("baru40")'>
@@ -880,24 +886,52 @@
                         <input type='button' value='虹' style='background-color:violet;' onclick='defStatusRainbow("baru40")'></td>
                 </tr>
                 </table>
-                
+        </div>
 
+        <br>
+        <br>
+        
 
+        <div>
+            <p>赤から虹になるまでに経過した時間を記録するログ</p>
+            <textarea name="akalog" rows="40" cols="85"></textarea>
         </div>
 
         <div>
             <p>公開日: 2020/2/24</p>
+            <p>赤を押したときにタイムカウントする機能を追加： 2020/2/26</p>
             <p>プロトタイプです。</p>
         </div>
 
         <script type="text/javascript">
 
-            var testname = "あああ";
+            var geruCntList = [];
+            var jamCntList = [];
+            var baruCntList = [];
 
-            function alertyonu()
+            var listNum = 0;
+
+            //カウント配列を初期化する
+            for (let i = 0; i < 40; i++)
             {
-                　
-            }  
+                //とりあえず０を入れておく
+                geruCntList.push(0);
+                jamCntList.push(0);
+                baruCntList.push(0);
+            }
+
+            function setServerNumber(num)
+            {
+                var serverName = document.getElementById("server" + num);
+                serverName.innerText = "サーバー" + num;
+            }
+            for (let i = 0; i < 40; i++)
+            {
+                setServerNumber(i + 1);
+            }
+
+
+            var testname = "あああ";
 
             function setButtonName(serverInt, fieldName)
             {
@@ -910,6 +944,9 @@
                 var umekomi = "<p style='background-color:white';>" + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + "</p>";
                 var sellStatus = document.getElementById(idName);
                 sellStatus.innerHTML = umekomi;
+
+                var clearNum = getServerNum(idName);
+                clearServer(idName, clearNum); 
             }
             function defStatusBlue(idName)
             {
@@ -917,6 +954,9 @@
                 var umekomi = "<p style='background-color:skyblue';>" + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + "</p>";
                 var sellStatus = document.getElementById(idName);
                 sellStatus.innerHTML = umekomi;
+
+                var clearNum = getServerNum(idName);
+                clearServer(idName, clearNum); 
             }
             function defStatusYellow(idName)
             {
@@ -924,6 +964,9 @@
                 var umekomi = "<p style='background-color:yellow';>" + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + "</p>";
                 var sellStatus = document.getElementById(idName);
                 sellStatus.innerHTML = umekomi;
+
+                var clearNum = getServerNum(idName);
+                clearServer(idName, clearNum); 
             }
             function defStatusRed(idName)
             {
@@ -931,6 +974,21 @@
                 var umekomi = "<p style='background-color:red';>" + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + "</p>";
                 var sellStatus = document.getElementById(idName);
                 sellStatus.innerHTML = umekomi;
+                
+                var cntId = idName + "cnt";
+
+                if (idName.indexOf('geru') != -1)
+                {
+                     geruCntList[getServerNum(idName)] = setInterval(function(){deffTime(cntId, date.getTime())}, 1000);
+                }
+                else if (idName.indexOf('jam') != -1)
+                {
+                    jamCntList[getServerNum(idName)] = setInterval(function(){deffTime(cntId, date.getTime())}, 1000);
+                }
+                else if (idName.indexOf('baru') != -1)
+                {
+                    baruCntList[getServerNum(idName)] = setInterval(function(){deffTime(cntId, date.getTime())}, 1000);
+                }
             }
             function defStatusRainbow(idName)
             {
@@ -938,16 +996,106 @@
                 var umekomi = "<p style='background-color:violet';>" + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + "</p>";
                 var sellStatus = document.getElementById(idName);
                 sellStatus.innerHTML = umekomi;
+
+                var clearNum = getServerNum(idName);
+                clearServer(idName, clearNum); 
             }
 
-            function setServerNumber(num)
+            //操作サーバー停止
+            function clearServer(idName, listNum)
             {
-                var serverName = document.getElementById("server" + num);
-                serverName.innerText = "サーバー" + num;
+                if (idName.indexOf('geru') != -1)
+                {
+                    clearInterval(geruCntList[listNum]);
+                }         
+                else if (idName.indexOf('jam') != -1)
+                {
+                    clearInterval(jamCntList[listNum]);
+                }
+                else if (idName.indexOf('baru') != -1)
+                {
+                    clearInterval(baruCntList[listNum]);
+                }  
             }
-            for (let i = 0; i < 40; i++)
+
+            //操作サーバーナンバー取得
+            //return int
+            function getServerNum(idName)
             {
-                setServerNumber(i + 1);
+                if (idName.indexOf('geru') != -1)
+                {
+                    //alert("geru");
+                    listNum = 0;
+                    if (idName.length == 5)
+                    {
+                        listNum = idName.slice(-1);
+                    }
+                    else
+                    {
+                        listNum = idName.slice(-2);
+                    }
+                }         
+                else if (idName.indexOf('jam') != -1)
+                {
+                    //alert("jam");
+                    listNum = 0;
+                    if (idName.length == 4)
+                    {
+                        listNum = idName.slice(-1);
+                    }
+                    else
+                    {
+                        listNum = idName.slice(-2);
+                    }
+                }
+                else if (idName.indexOf('baru') != -1)
+                {
+                    //alert("baru");
+                    listNum = 0;
+                    if (idName.length == 5)
+                    {
+                        listNum = idName.slice(-1);
+                    }
+                    else
+                    {
+                        listNum = idName.slice(-2);
+                    }
+                }  
+                return listNum - 1;
+            }
+
+            //カウント開始の無名関数
+            var deffTime = function(cntId, hikakuTime)
+            {
+                var cntDate = new Date();
+                var cntTime = cntDate.getTime();
+
+                //alert(hikakuTime + "-" + cntDate.getTime());
+
+                //hikakuTime(赤にした時間)とcntDate(経過時間)を比較した時間をとる
+                var diff = cntTime - hikakuTime;
+                //HH部分取得
+                let diffHour = diff / (1000 * 60 * 60);
+                //MM部分取得
+                let diffMinute = (diffHour - Math.floor(diffHour)) * 60;
+                //SS部分取得
+                let diffSecond = (diffMinute - Math.floor(diffMinute)) * 60;
+                //経過時間取得
+                var countTimer = ('00' + Math.floor(diffHour)).slice(-2) + ':' + ('00' + Math.floor(diffMinute)).slice(-2) + ':' + ('00' + Math.round(diffSecond)).slice(-2)
+
+                var cntTime = document.getElementById(cntId);
+                var uumekomi = "<p id='" + cntId + "'>" + countTimer + "</p>";
+
+                cntTime.innerHTML = uumekomi;
+            }
+
+            //カウント停止の無名関数
+            function endCount(cntId)
+            {
+                var endCountId = document.getElementById(cntId);
+                var umekomi = "<p id='" + cntId + "'></p>";
+
+                endCountId.innerHTML = umekomi;
             }
 
         </script>
